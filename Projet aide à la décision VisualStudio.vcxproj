@@ -77,6 +77,9 @@
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
     </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -115,6 +118,31 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="B1Contrainte.cpp" />
+    <ClCompile Include="B1ContrainteDifferent.cpp" />
+    <ClCompile Include="B1ContrainteEgal.cpp" />
+    <ClCompile Include="B1ContrainteInfEgal.cpp" />
+    <ClCompile Include="B1ContrainteSomme.cpp" />
+    <ClCompile Include="B1ContrainteSommeEgale.cpp" />
+    <ClCompile Include="B1ContrainteSupEgal.cpp" />
+    <ClCompile Include="B1main.cpp" />
+    <ClCompile Include="B1Variable.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="B1Contrainte.h" />
+    <ClInclude Include="B1ContrainteDifferent.h" />
+    <ClInclude Include="B1ContrainteEgal.h" />
+    <ClInclude Include="B1ContrainteInfEgal.h" />
+    <ClInclude Include="B1ContrainteSomme.h" />
+    <ClInclude Include="B1ContrainteSommeEgale.h" />
+    <ClInclude Include="B1ContrainteSupEgal.h" />
+    <ClInclude Include="B1Variable.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="B1Exemple.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Readme.md" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
