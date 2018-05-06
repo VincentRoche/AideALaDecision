@@ -9,5 +9,5 @@ ContrainteDifferent::ContrainteDifferent(unsigned int var1, unsigned int var2)
 
 bool ContrainteDifferent::verifie(vector<vector<int>> domaines)
 {
-	return domaines[variables[0]][0] == domaines[variables[1]][0];
+	return domaines[variables[0]][0] != domaines[variables[1]][0];
 }

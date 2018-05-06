@@ -16,6 +16,8 @@
 #include "B1ContrainteSommeInfEgale.h"
 using namespace std;
 
+vector<int> methode_triviale(const vector<unsigned int> &variablesAssignees, const vector<vector<int>> &domaines, const unsigned int nbVariables, const vector<Contrainte *> &contraintes);
+
 int main(int argc, const char * argv[]) {
 
 	// Définition des variables
@@ -118,5 +120,91 @@ int main(int argc, const char * argv[]) {
 		cout << endl;
 	}
 
+
+
+	vector<int> assignations = methode_triviale(vector<unsigned int>(), domaines, nbVariables, contraintes);
+	// Affichage des résultats
+	cout << endl << "Résultats :" << endl;
+	if (assignations.size() == 0)
+		cout << "Aucun résultat." << endl;
+	else
+	{
+		for (unsigned int i = 0; i < nbVariables; i++)
+		{
+			cout << "Variable " << i << " = " << assignations[i] << endl;
+		}
+	}
+
+
 	return 0;
+}
+
+/* Retourne true si toutes les contraintes données sont vérifiées par les domaines (qui contiennent chacun une seule valeur) */
+bool verification_des_contraintes(vector<vector<int>> domaines, vector<Contrainte *> contraintes)
+{
+	/*for (unsigned int i = 0; i < domaines.size(); i++)
+	{
+		cout << "Variable " << i << " = " << domaines[i][0] << endl;
+	}*/
+	for (unsigned int i = 0; i < contraintes.size(); i++)
+	{
+		// Si une contrainte n'est pas vérifiée, on retourne false.
+		if (!(*contraintes[i]).verifie(domaines))
+		{
+			/*cout << "Contrainte non vérifiée : ";
+			(*contraintes[i]).print();
+			cout << endl << endl;*/
+			return false;
+		}
+	}
+	return true;
+}
+
+vector<int> methode_triviale(const vector<unsigned int> &variablesAssignees, const vector<vector<int>> &domaines, const unsigned int nbVariables, const vector<Contrainte *> &contraintes)
+{
+	if (variablesAssignees.size() == nbVariables) // Si toutes les variables ont été assignées
+	{
+		if (verification_des_contraintes(domaines, contraintes))
+		{
+			// Succès, création d'un tableau des bonnes valeurs
+			vector<int> valeurs(nbVariables);
+			for (unsigned int i = 0; i < domaines.size(); i++)
+			{
+				valeurs.insert(valeurs.begin() + i, domaines[i][0]);
+			}
+			return valeurs;
+		}
+		else
+		{
+			return vector<int>();
+		}
+	}
+	else
+	{
+		// Choix d'une variable x parmi celles non assignées
+		unsigned int x;
+		for (unsigned int i = 0; i < nbVariables; i++)
+		{
+			if (find(variablesAssignees.begin(), variablesAssignees.end(), i) == variablesAssignees.end()) // Si i n'est pas dans variablesAssignees
+			{
+				x = i;
+				break;
+			}
+		}
+
+		vector<unsigned int> nvellesVariablesAssignees = variablesAssignees;
+		nvellesVariablesAssignees.push_back(x);
+
+		// Appel récursif pour chaque valeur du domaine de x
+		for (unsigned int i = 0; i < domaines[x].size(); i++)
+		{
+			int v = domaines[x][i];
+			vector<vector<int>> nveauxDomaines = domaines;
+			nveauxDomaines[x] = { v }; // Le domaine de x ne contient que v
+			vector<int> z = methode_triviale(nvellesVariablesAssignees, nveauxDomaines, nbVariables, contraintes);
+			if (z.size() > 0)
+				return z;
+		}
+		return vector<int>();
+	}
 }
