@@ -124,6 +124,7 @@
     <ClCompile Include="B1ContrainteInfEgal.cpp" />
     <ClCompile Include="B1ContrainteSomme.cpp" />
     <ClCompile Include="B1ContrainteSommeEgale.cpp" />
+    <ClCompile Include="B1ContrainteSommeInfEgale.cpp" />
     <ClCompile Include="B1ContrainteSupEgal.cpp" />
     <ClCompile Include="B1main.cpp" />
     <ClCompile Include="B1Variable.cpp" />
@@ -135,6 +136,7 @@
     <ClInclude Include="B1ContrainteInfEgal.h" />
     <ClInclude Include="B1ContrainteSomme.h" />
     <ClInclude Include="B1ContrainteSommeEgale.h" />
+    <ClInclude Include="B1ContrainteSommeInfEgale.h" />
     <ClInclude Include="B1ContrainteSupEgal.h" />
     <ClInclude Include="B1Variable.h" />
   </ItemGroup>

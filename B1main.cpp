@@ -13,6 +13,7 @@
 #include "B1ContrainteInfEgal.h"
 #include "B1ContrainteSupEgal.h"
 #include "B1ContrainteSommeEgale.h"
+#include "B1ContrainteSommeInfEgale.h"
 using namespace std;
 
 int main(int argc, const char * argv[]) {
@@ -80,7 +81,7 @@ int main(int argc, const char * argv[]) {
 				contraintes.push_back(new ContrainteInfEgal(nbres[1], nbres[2]));
 			else if (type == 4) // Type 4 : variable supérieure ou égale à une autre
 				contraintes.push_back(new ContrainteSupEgal(nbres[1], nbres[2]));
-			else if (type == 10 && type < 20) // Types de 10 à 19 : sommes basiques
+			else if (type >= 10 && type < 20) // Types de 10 à 19 : sommes basiques
 			{
 				int valeur = nbres[1];
 				// Création d'un vecteur des numéros des variables à prendre en compte dans la somme
@@ -91,6 +92,8 @@ int main(int argc, const char * argv[]) {
 				}
 				if (type == 10) // Type 10 : somme des variables égale au premier nombre
 					contraintes.push_back(new ContrainteSommeEgale(variablesSomme, valeur));
+				else if (type == 11) // Type 11 : somme des variables inférieure ou égale au premier nombre
+					contraintes.push_back(new ContrainteSommeInfEgale(variablesSomme, valeur));
 			}
 		}
 	}
