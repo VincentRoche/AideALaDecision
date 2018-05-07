@@ -6,7 +6,7 @@ ContrainteSommeEgale::ContrainteSommeEgale(vector<unsigned int> variablesSomme, 
 	this->variables = variablesSomme;
 }
 
-bool ContrainteSommeEgale::verifie(vector<vector<int>> domaines)
+bool ContrainteSommeEgale::verifie(const vector<vector<int>> &domaines)
 {
 	return calculerSomme(domaines) == valeur;
 }

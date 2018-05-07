@@ -7,7 +7,7 @@ ContrainteSupEgal::ContrainteSupEgal(unsigned int var1, unsigned int var2)
 	variables.push_back(var2);
 }
 
-bool ContrainteSupEgal::verifie(vector<vector<int>> domaines)
+bool ContrainteSupEgal::verifie(const vector<vector<int>> &domaines)
 {
 	return domaines[variables[0]][0] >= domaines[variables[1]][0];
 }

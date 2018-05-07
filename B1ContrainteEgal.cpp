@@ -7,7 +7,7 @@ ContrainteEgal::ContrainteEgal(unsigned int var1, unsigned int var2)
 	variables.push_back(var2);
 }
 
-bool ContrainteEgal::verifie(vector<vector<int>> domaines)
+bool ContrainteEgal::verifie(const vector<vector<int>> &domaines)
 {
 	return domaines[variables[0]][0] == domaines[variables[1]][0];
 }

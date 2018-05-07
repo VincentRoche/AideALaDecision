@@ -11,7 +11,7 @@ public:
 	ContrainteSommeInfEgale(vector<unsigned int> variablesSomme, int valeur);
 
 	// Hérité via Contrainte
-	virtual bool verifie(vector<vector<int>> domaines) override;
+	virtual bool verifie(const vector<vector<int>> &domaines) override;
 	virtual void print() override {
 		printSomme();
 		cout << " <= " << valeur;

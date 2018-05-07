@@ -6,7 +6,7 @@ class ContrainteSomme :
 {
 public:
 	// Hérité via Contrainte
-	virtual bool verifie(vector<vector<int>> domaines) = 0;
+	virtual bool verifie(const vector<vector<int>> &domaines) = 0;
 	virtual void print() = 0;
 
 	/* Retourne la somme des valeurs correspondantes aux variables de la somme. */

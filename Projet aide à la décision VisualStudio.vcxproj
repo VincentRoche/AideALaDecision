@@ -118,6 +118,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="B1Affichage.cpp" />
     <ClCompile Include="B1Contrainte.cpp" />
     <ClCompile Include="B1ContrainteDifferent.cpp" />
     <ClCompile Include="B1ContrainteEgal.cpp" />
@@ -125,11 +126,12 @@
     <ClCompile Include="B1ContrainteSomme.cpp" />
     <ClCompile Include="B1ContrainteSommeEgale.cpp" />
     <ClCompile Include="B1ContrainteSommeInfEgale.cpp" />
+    <ClCompile Include="B1ContrainteSommeRetenue.cpp" />
     <ClCompile Include="B1ContrainteSupEgal.cpp" />
     <ClCompile Include="B1main.cpp" />
-    <ClCompile Include="B1Variable.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="B1Affichage.h" />
     <ClInclude Include="B1Contrainte.h" />
     <ClInclude Include="B1ContrainteDifferent.h" />
     <ClInclude Include="B1ContrainteEgal.h" />
@@ -137,11 +139,13 @@
     <ClInclude Include="B1ContrainteSomme.h" />
     <ClInclude Include="B1ContrainteSommeEgale.h" />
     <ClInclude Include="B1ContrainteSommeInfEgale.h" />
+    <ClInclude Include="B1ContrainteSommeRetenue.h" />
     <ClInclude Include="B1ContrainteSupEgal.h" />
-    <ClInclude Include="B1Variable.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="B1Exemple.txt" />
+    <Text Include="B1Probleme1.txt" />
+    <Text Include="B1Probleme3.txt" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Readme.md" />
