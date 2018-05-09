@@ -75,8 +75,8 @@ int main(int argc, const char * argv[]) {
 				valeurs.push_back(nbres[j]);
 			}
 			domaines.insert(domaines.begin() + nbres[0], valeurs);
-			if (valeurs.size() == 1)
-				variablesAssignees.push_back(nbres[0]);
+			/*if (valeurs.size() == 1)
+				variablesAssignees.push_back(nbres[0]);*/
 		}
 		else // Autres lignes : contraintes
 		{
