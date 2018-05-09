@@ -30,12 +30,12 @@ int main(int argc, const char * argv[]) {
 	vector<unsigned int> variablesAssignees; // Variables dont les valeurs sont déjà connues
 
 	// Ouverture du fichier
+	string nomFichier;
 	ifstream infile;
 	do {
 		cout << "Fichier a lire (en entier, avec son extension) : ";
-		string nomFichier;
-		nomFichier = "B1Probleme1.txt"; // Temporaire, pour tester
-		//cin >> nomFichier;
+		//nomFichier = "B1Probleme2.txt"; // Temporaire, pour tester
+		cin >> nomFichier;
 
 
 		// Ouverture du fichier
@@ -161,9 +161,9 @@ int main(int argc, const char * argv[]) {
 			}
 
 			// Affichage des résultats
-			cout << endl << "Résultats :" << endl;
+			cout << endl << "Resultats :" << endl;
 			if (assignations.size() == 0)
-				cout << "Aucun résultat." << endl;
+				cout << "Aucun resultat." << endl;
 			else
 			{
 				for (unsigned int i = 0; i < nbVariables; i++)
@@ -171,9 +171,12 @@ int main(int argc, const char * argv[]) {
 					cout << "Variable " << i << " = " << assignations[i] << endl;
 				}
 
-				cout << "Sudoku :" << endl;
-				Affichage::afficherGrille(assignations, 9, 3);
-				Affichage::grilleSudokuNumerottee();
+				if (nomFichier == "B1Probleme1.txt" || nomFichier == "B1Probleme2.txt")
+				{
+					cout << "Sudoku :" << endl;
+					Affichage::afficherGrille(assignations, 9, 3);
+					Affichage::grilleSudokuNumerottee();
+				}
 			}
 		}
 
