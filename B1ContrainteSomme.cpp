@@ -3,9 +3,12 @@
 int ContrainteSomme::calculerSomme(vector<vector<int>> domaines)
 {
 	int somme = 0;
-	for (unsigned int i = 0; i < variables.size(); i++)
+	cout << " > somme(";
+	for (unsigned int i = 0; i < variablesSomme.size(); i++)
 	{
-		somme += domaines[variables[i]][0];
+		cout << domaines[variables[i]][0] << " ";
+		somme += domaines[variablesSomme[i]][0];
 	}
+	cout << ") = " << somme << endl;
 	return somme;
 }

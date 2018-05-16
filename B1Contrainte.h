@@ -9,7 +9,7 @@ using namespace std;
 
 class Contrainte {
 protected:
-	vector<unsigned int> variables; // Numéros des variables utilisées par la contrainte
+	vector<unsigned int> variables; // Numéros de toutes les variables utilisées par la contrainte
     
 public:
 	/* Vérifie si les valeurs données vérifient la contrainte (les domaines ne doivent contenir qu'une seule valeur chacun). */

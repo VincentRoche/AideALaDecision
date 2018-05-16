@@ -143,6 +143,7 @@
     <ClInclude Include="B1ContrainteSupEgal.h" />
   </ItemGroup>
   <ItemGroup>
+    <Text Include="B1CarreMagique.txt" />
     <Text Include="B1Exemple.txt" />
     <Text Include="B1Probleme1.txt" />
     <Text Include="B1Probleme2.txt" />

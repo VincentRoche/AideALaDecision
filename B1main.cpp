@@ -182,7 +182,7 @@ int main(int argc, const char * argv[]) {
 
 	} while (choix >= 1 && choix <= 2);
 
-	
+
 	return 0;
 }
 
@@ -286,9 +286,20 @@ vector<vector<int>> reduction_des_domaines(const vector<unsigned int>& variables
 						domainesTest[var] = { valTestee };
 						if ((*c).verifieDomainesMultiples(domainesTest))
 							nveauDomaine.push_back(valTestee);
+						else
+						{
+							cout << var << "=" << valTestee << " ne vérifie pas ";
+							c->print();
+							cout << endl;
+						}
 					}
 					nveauxDomaines[var] = nveauDomaine;
-					//cout << "Domaine de " << var << " : " << domaines[var].size() << "->" << nveauDomaine.size() << endl;
+					cout << "	Domaine de " << var << " : " << domaines[var].size() << "->" << nveauDomaine.size() << endl;
+					for (int v : nveauDomaine)
+					{
+						cout << " " << v;
+					}
+					cout << endl;
 					// Si le domaine est vide, réduction des branches, pas besoin de continuer
 					if (nveauDomaine.size() == 0)
 						return nveauxDomaines;
@@ -339,7 +350,7 @@ vector<int> methode_reduction_domaines(const vector<unsigned int>& variablesAssi
 		vector<unsigned int> variablesNonAssignees;
 		for (unsigned int i = 0; i < nbVariables; i++)
 		{
-			if (find(variablesAssignees.begin(), variablesAssignees.end(), i) == variablesAssignees.end()) // Si i n'est pas dans variablesAssignees
+			if (find(nvellesVariablesAssignees.begin(), nvellesVariablesAssignees.end(), i) == nvellesVariablesAssignees.end()) // Si i n'est pas dans nvellesVariablesAssignees
 			{
 				variablesNonAssignees.push_back(i);
 			}
@@ -348,6 +359,7 @@ vector<int> methode_reduction_domaines(const vector<unsigned int>& variablesAssi
 		for (unsigned int i = 0; i < domaines[x].size(); i++)
 		{
 			int v = domaines[x][i];
+			cout << "* Essai de " << x << " = " << v << endl;
 			vector<vector<int>> nveauxDomaines = domaines;
 			nveauxDomaines[x] = { v }; // Le domaine de x ne contient que v
 			nveauxDomaines = reduction_des_domaines(variablesNonAssignees, x, nveauxDomaines, nbVariables, contraintes);
@@ -357,6 +369,7 @@ vector<int> methode_reduction_domaines(const vector<unsigned int>& variablesAssi
 				if (z.size() > 0)
 					return z;
 			}
+			cout << "Abandon" << endl;
 		}
 		return vector<int>();
 	}

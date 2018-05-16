@@ -4,6 +4,9 @@
 class ContrainteSomme :
 	public Contrainte
 {
+protected:
+	vector<unsigned int> variablesSomme; // Numéros des variables à additionner dans la somme
+
 public:
 	// Hérité via Contrainte
 	virtual bool verifie(const vector<vector<int>> &domaines) = 0;
@@ -16,9 +19,9 @@ public:
 	void printSomme()
 	{
 		cout << "somme(";
-		for (unsigned int i = 0; i < variables.size(); i++)
+		for (unsigned int i = 0; i < variablesSomme.size(); i++)
 		{
-			cout << variables[i] << " ";
+			cout << variablesSomme[i] << " ";
 		}
 		cout << ")";
 	}

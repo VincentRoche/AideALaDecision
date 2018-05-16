@@ -4,6 +4,7 @@ ContrainteSommeInfEgale::ContrainteSommeInfEgale(vector<unsigned int> variablesS
 {
 	this->valeur = valeur;
 	this->variables = variablesSomme;
+	this->variablesSomme = variablesSomme;
 }
 
 bool ContrainteSommeInfEgale::verifie(const vector<vector<int>> &domaines)
