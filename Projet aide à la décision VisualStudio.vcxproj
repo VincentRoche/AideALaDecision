@@ -149,6 +149,8 @@
     <Text Include="B1Probleme2.txt" />
     <Text Include="B1Probleme3.txt" />
     <Text Include="B1Probleme4.txt" />
+    <Text Include="B1Probleme4bis.txt" />
+    <Text Include="B1Probleme4I.txt" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Readme.md" />

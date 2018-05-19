@@ -149,7 +149,7 @@ int main(int argc, const char * argv[]) {
 		cout << "Quelle methode tester ?" << endl
 			<< "1 : methode triviale" << endl
 			<< "2 : methode avec reduction des domaines de valeur" << endl
-			<< "3 : reduction des domaines de valeur avec choix de strategie de cosntruction" << endl
+			<< "3 : reduction des domaines de valeur avec choix de strategie de construction" << endl
 			<< "Indiquez le numero choisi (ou un autre pour quitter) : ";
 		cin >> choix;
 
