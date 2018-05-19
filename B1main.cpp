@@ -175,7 +175,6 @@ int main(int argc, const char * argv[]) {
 				{
 					cout << "Sudoku :" << endl;
 					Affichage::afficherGrille(assignations, 9, 3);
-					Affichage::grilleSudokuNumerottee();
 				}
 			}
 		}
@@ -280,21 +279,21 @@ vector<vector<int>> reduction_des_domaines(const vector<unsigned int>& variables
 				{
 					// Création du nouveau domaine de var qui ne contient que les valeurs vérifiant la contrainte
 					vector<int> nveauDomaine;
-					for (int valTestee : domaines[var]) // Test de chaque valeur possible dans le domaine de var
+					for (int valTestee : nveauxDomaines[var]) // Test de chaque valeur possible dans le domaine de var
 					{
-						vector<vector<int>> domainesTest = domaines;
+						vector<vector<int>> domainesTest = nveauxDomaines;
 						domainesTest[var] = { valTestee };
 						if ((*c).verifieDomainesMultiples(domainesTest))
 							nveauDomaine.push_back(valTestee);
 						else
 						{
-							cout << var << "=" << valTestee << " ne vérifie pas ";
+							cout << "X" << var << "=" << valTestee << " ne vérifie pas ";
 							c->print();
 							cout << endl;
 						}
 					}
 					nveauxDomaines[var] = nveauDomaine;
-					cout << "	Domaine de " << var << " : " << domaines[var].size() << "->" << nveauDomaine.size() << endl;
+					cout << "	Domaine de " << var << " reduit de " << domaines[var].size() << " a " << nveauDomaine.size() << " :";
 					for (int v : nveauDomaine)
 					{
 						cout << " " << v;

@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <iostream>
 #include <vector>
+#include <map>
 
 using namespace std;
 
@@ -25,6 +26,11 @@ public:
 	{
 		return variables;
 	}
+
+private:
+	/* Incrémente la i-ème valeur de iDomaines pour le parcours des valeurs des domaines (comme si les chiffres de iDomaines représentaient un nombre et qu'on comptait).
+	Retourne true si on ne peut plus incrémenter. */
+	bool iterationCombinaison(const vector<vector<int>> &domaines, vector<vector<unsigned int>> &iDomaines, int i);
 };
 
 #endif /* B1_Contrainte_hpp */
