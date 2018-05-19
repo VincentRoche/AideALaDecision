@@ -7,6 +7,8 @@
 #include <sstream>
 #include <map>
 #include <algorithm>
+#include <ctime>
+#include <time.h>
 #include "B1Contrainte.h"
 #include "B1ContrainteEgal.h"
 #include "B1ContrainteDifferent.h"
@@ -19,7 +21,7 @@
 using namespace std;
 
 vector<int> methode_triviale(const vector<unsigned int> &variablesAssignees, const vector<vector<int>> &domaines, const unsigned int nbVariables, const vector<Contrainte *> &contraintes);
-vector<int> methode_reduction_domaines(const vector<unsigned int> &variablesAssignees, const vector<vector<int>> &domaines, const unsigned int nbVariables, const vector<Contrainte *> &contraintes);
+vector<int> methode_reduction_domaines(const vector<unsigned int> &variablesAssignees, const vector<vector<int>> &domaines, const unsigned int nbVariables, const vector<Contrainte *> &contraintes, int methodeChoixVars = 0);
 
 int main(int argc, const char * argv[]) {
 	
@@ -144,11 +146,17 @@ int main(int argc, const char * argv[]) {
 	int choix;
 	do
 	{
-		cout << "Quelle methode tester ?" << endl << "1 : methode triviale" << endl << "2 : methode avec reduction des domaines de valeur" << endl << "Indiquez le numero choisi (ou un autre pour quitter) : ";
+		cout << "Quelle methode tester ?" << endl
+			<< "1 : methode triviale" << endl
+			<< "2 : methode avec reduction des domaines de valeur" << endl
+			<< "3 : reduction des domaines de valeur avec choix de strategie de cosntruction" << endl
+			<< "Indiquez le numero choisi (ou un autre pour quitter) : ";
 		cin >> choix;
 
-		if (choix >= 1 && choix <= 2)
+		if (choix >= 1 && choix <= 3)
 		{
+			const clock_t begin_time = clock();
+
 			cout << endl << "Calcul en cours..." << endl;
 			vector<int> assignations;
 			if (choix == 1)
@@ -158,6 +166,17 @@ int main(int argc, const char * argv[]) {
 			else if (choix == 2)
 			{
 				assignations = methode_reduction_domaines(variablesAssignees, domaines, nbVariables, contraintes);
+			}
+			else if (choix == 3)
+			{
+				int choixStrategie = 0;
+				cout << "Quelle strategie de construction ?" << endl
+					<< "0 : assignation des variables dans l'ordre de leur numerotation (par defaut)" << endl
+					<< "1 : choix des variables avec les plus grands domaines de valeurs" << endl
+					<< "2 : choix des variables avec les plus petits domaines de valeurs" << endl
+					<< "Indiquez le numero choisi : ";
+				cin >> choixStrategie;
+				assignations = methode_reduction_domaines(variablesAssignees, domaines, nbVariables, contraintes, choixStrategie);
 			}
 
 			// Affichage des résultats
@@ -186,9 +205,11 @@ int main(int argc, const char * argv[]) {
 						<< " = " << assignations[4] << assignations[2] << assignations[1] << assignations[9] << assignations[4] << assignations[1] << endl;
 				}
 			}
+
+			std::cout << "Temps de calcul : " << float(clock() - begin_time) / CLOCKS_PER_SEC << " sec." << endl << endl;
 		}
 
-	} while (choix >= 1 && choix <= 2);
+	} while (choix >= 1 && choix <= 3);
 
 
 	return 0;
@@ -330,7 +351,7 @@ bool aucun_domaine_vide(const vector<vector<int>>& domaines)
 	return true;
 }
 
-vector<int> methode_reduction_domaines(const vector<unsigned int>& variablesAssignees, const vector<vector<int>>& domaines, const unsigned int nbVariables, const vector<Contrainte*>& contraintes)
+vector<int> methode_reduction_domaines(const vector<unsigned int>& variablesAssignees, const vector<vector<int>>& domaines, const unsigned int nbVariables, const vector<Contrainte*>& contraintes, int methodeChoixVars)
 {
 	cout << variablesAssignees.size() << " variables assignees" << endl;
 	if (variablesAssignees.size() == nbVariables) // Si toutes les variables ont été assignées
@@ -342,12 +363,34 @@ vector<int> methode_reduction_domaines(const vector<unsigned int>& variablesAssi
 	{
 		// Choix d'une variable x parmi celles non assignées
 		unsigned int x;
+		int temp = 0; // Pour comparer les variables
+		if (methodeChoixVars == 2)
+			temp = nbVariables + 1;
 		for (unsigned int i = 0; i < nbVariables; i++)
 		{
 			if (find(variablesAssignees.begin(), variablesAssignees.end(), i) == variablesAssignees.end()) // Si i n'est pas dans variablesAssignees
 			{
-				x = i;
-				break;
+				if (methodeChoixVars == 1) // Variable avec le plus grand domaine de valeurs
+				{
+					if (temp < domaines[i].size())
+					{
+						temp = domaines[i].size();
+						x = i;
+					}
+				}
+				else if (methodeChoixVars == 2) // Variable avec le plus petit domaine de valeurs
+				{
+					if (temp > domaines[i].size())
+					{
+						temp = domaines[i].size();
+						x = i;
+					}
+				}
+				else
+				{
+					x = i;
+					break;
+				}
 			}
 		}
 
@@ -373,7 +416,7 @@ vector<int> methode_reduction_domaines(const vector<unsigned int>& variablesAssi
 			nveauxDomaines = reduction_des_domaines(variablesNonAssignees, x, nveauxDomaines, nbVariables, contraintes);
 			if (aucun_domaine_vide(nveauxDomaines))
 			{
-				vector<int> z = methode_reduction_domaines(nvellesVariablesAssignees, nveauxDomaines, nbVariables, contraintes);
+				vector<int> z = methode_reduction_domaines(nvellesVariablesAssignees, nveauxDomaines, nbVariables, contraintes, methodeChoixVars);
 				if (z.size() > 0)
 					return z;
 			}
