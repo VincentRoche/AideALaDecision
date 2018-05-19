@@ -176,6 +176,15 @@ int main(int argc, const char * argv[]) {
 					cout << "Sudoku :" << endl;
 					Affichage::afficherGrille(assignations, 9, 3);
 				}
+				else if (nomFichier == "B1Probleme3.txt")
+				{
+					cout << assignations[0] << assignations[1] << assignations[2] << assignations[3]
+						<< " + " << assignations[4] << assignations[2] << assignations[3] << assignations[5] << assignations[6]
+						<< " + " << assignations[4] << assignations[2] << assignations[3] << assignations[5] << assignations[6]
+						<< " + " << assignations[7] << assignations[3] << assignations[8] << assignations[0] << assignations[1]
+						<< " + " << assignations[7] << assignations[3] << assignations[8] << assignations[0] << assignations[1]
+						<< " = " << assignations[4] << assignations[2] << assignations[1] << assignations[9] << assignations[4] << assignations[1] << endl;
+				}
 			}
 		}
 
