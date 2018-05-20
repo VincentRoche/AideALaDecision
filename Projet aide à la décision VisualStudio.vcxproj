@@ -149,6 +149,7 @@
     <Text Include="B1Probleme4.txt" />
     <Text Include="B1Probleme4bis.txt" />
     <Text Include="B1Probleme4I.txt" />
+    <Text Include="B1Probleme5.txt" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram.cd" />

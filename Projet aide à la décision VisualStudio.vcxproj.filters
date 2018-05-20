@@ -104,5 +104,8 @@
     <Text Include="B1Probleme4I.txt">
       <Filter>Fichiers de ressources</Filter>
     </Text>
+    <Text Include="B1Probleme5.txt">
+      <Filter>Fichiers de ressources</Filter>
+    </Text>
   </ItemGroup>
 </Project>
