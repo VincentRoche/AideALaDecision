@@ -1,0 +1,112 @@
+
+Variables et valeurs possibles :
+Variable 0 : 0 1 2 3 4 5 6 7 8 9
+Variable 1 : 0 1 2 3 4 5 6 7 8 9
+Variable 2 : 0 1 2 3 4 5 6 7 8 9
+Variable 3 : 0 1 2 3 4 5 6 7 8 9
+Variable 4 : 0 1 2 3 4 5 6 7 8 9
+Variable 5 : 0 1 2 3 4 5 6 7 8 9
+Variable 6 : 0 1 2 3 4 5 6 7 8 9
+Variable 7 : 0 1 2 3 4 5 6 7 8 9
+Variable 8 : 0 1 2 3 4 5 6 7 8 9
+Variable 9 : 0 1 2 3 4 5 6 7 8 9
+Variable 10 : 0 1 2 3 4
+Variable 11 : 0 1 2 3 4
+Variable 12 : 0 1 2 3 4
+Variable 13 : 0 1 2 3 4
+Variable 14 : 0 1 2 3
+
+Quelle methode tester ?
+1 : methode triviale
+2 : methode avec reduction des domaines de valeur
+3 : reduction des domaines de valeur avec choix de strategie de construction
+Indiquez le numero choisi (ou un autre pour quitter) : 3
+Quelle strategie de construction ?
+0 : assignation des variables dans l'ordre de leur numerotation (par defaut)
+1 : choix des variables avec les plus grands domaines de valeurs
+2 : choix des variables avec les plus petits domaines de valeurs
+Indiquez le numero choisi : 0
+
+
+### RESULTATS ###
+Variable 0 = 3
+Variable 1 = 4
+Variable 2 = 9
+Variable 3 = 6
+Variable 4 = 1
+Variable 5 = 2
+Variable 6 = 5
+Variable 7 = 7
+Variable 8 = 0
+Variable 9 = 8
+Variable 10 = 2
+Variable 11 = 2
+Variable 12 = 1
+Variable 13 = 3
+Variable 14 = 1
+3496 + 19625 + 19625 + 76034 + 76034 = 194814
+>>> Temps de calcul : 103.809 sec.
+
+
+Quelle methode tester ?
+1 : methode triviale
+2 : methode avec reduction des domaines de valeur
+3 : reduction des domaines de valeur avec choix de strategie de construction
+Indiquez le numero choisi (ou un autre pour quitter) : 3
+Quelle strategie de construction ?
+0 : assignation des variables dans l'ordre de leur numerotation (par defaut)
+1 : choix des variables avec les plus grands domaines de valeurs
+2 : choix des variables avec les plus petits domaines de valeurs
+Indiquez le numero choisi : 1
+
+
+### RESULTATS ###
+Variable 0 = 3
+Variable 1 = 4
+Variable 2 = 9
+Variable 3 = 6
+Variable 4 = 1
+Variable 5 = 2
+Variable 6 = 5
+Variable 7 = 7
+Variable 8 = 0
+Variable 9 = 8
+Variable 10 = 2
+Variable 11 = 2
+Variable 12 = 1
+Variable 13 = 3
+Variable 14 = 1
+3496 + 19625 + 19625 + 76034 + 76034 = 194814
+>>> Temps de calcul : 100.536 sec.
+
+
+Quelle methode tester ?
+1 : methode triviale
+2 : methode avec reduction des domaines de valeur
+3 : reduction des domaines de valeur avec choix de strategie de construction
+Indiquez le numero choisi (ou un autre pour quitter) : 3
+Quelle strategie de construction ?
+0 : assignation des variables dans l'ordre de leur numerotation (par defaut)
+1 : choix des variables avec les plus grands domaines de valeurs
+2 : choix des variables avec les plus petits domaines de valeurs
+Indiquez le numero choisi : 2
+
+
+### RESULTATS ###
+Variable 0 = 3
+Variable 1 = 4
+Variable 2 = 9
+Variable 3 = 6
+Variable 4 = 1
+Variable 5 = 2
+Variable 6 = 5
+Variable 7 = 7
+Variable 8 = 0
+Variable 9 = 8
+Variable 10 = 2
+Variable 11 = 2
+Variable 12 = 1
+Variable 13 = 3
+Variable 14 = 1
+3496 + 19625 + 19625 + 76034 + 76034 = 194814
+>>> Temps de calcul : 296.168 sec.
