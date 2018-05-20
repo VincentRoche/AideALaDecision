@@ -28,6 +28,30 @@ public:
 			}
 		}
 	}
+	static void afficherGrilleTriangulaire(const vector<int> &valeurs, const unsigned int taille)
+	{
+		unsigned int ligne = 0;
+		unsigned int i2 = 0;
+		for (unsigned int i = 0; i < valeurs.size(); i++)
+		{
+			cout << setw(3) << valeurs[i];
+			cout << " ";
+			if ((i2 + 1) % taille == 0) // Si c'est le bout de la ligne
+			{
+				cout << endl;
+				ligne++;
+
+				// Espaces au début de la ligne
+				for (unsigned int j = 0; j < ligne; j++)
+				{
+					cout << setw(4) << " ";
+					i2++;
+				}
+			}
+			i2++;
+		}
+		cout << endl;
+	}
 
 	/* Affiche une grille de sudoku avec les numéros des variables */
 	static void grilleSudokuNumerottee()

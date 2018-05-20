@@ -45,6 +45,9 @@
     <ClCompile Include="B1ContrainteSommeRetenue.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
+    <ClCompile Include="B1ContrainteInf.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="B1Contrainte.h">
@@ -72,6 +75,9 @@
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
     <ClInclude Include="B1ContrainteSommeRetenue.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="B1ContrainteInf.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
   </ItemGroup>
@@ -105,6 +111,12 @@
       <Filter>Fichiers de ressources</Filter>
     </Text>
     <Text Include="B1Probleme5.txt">
+      <Filter>Fichiers de ressources</Filter>
+    </Text>
+    <Text Include="B1Probleme6.txt">
+      <Filter>Fichiers de ressources</Filter>
+    </Text>
+    <Text Include="B1Probleme7.txt">
       <Filter>Fichiers de ressources</Filter>
     </Text>
   </ItemGroup>

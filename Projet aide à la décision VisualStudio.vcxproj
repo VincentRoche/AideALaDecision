@@ -122,6 +122,7 @@
     <ClCompile Include="B1Contrainte.cpp" />
     <ClCompile Include="B1ContrainteDifferent.cpp" />
     <ClCompile Include="B1ContrainteEgal.cpp" />
+    <ClCompile Include="B1ContrainteInf.cpp" />
     <ClCompile Include="B1ContrainteInfEgal.cpp" />
     <ClCompile Include="B1ContrainteSomme.cpp" />
     <ClCompile Include="B1ContrainteSommeEgale.cpp" />
@@ -134,6 +135,7 @@
     <ClInclude Include="B1Contrainte.h" />
     <ClInclude Include="B1ContrainteDifferent.h" />
     <ClInclude Include="B1ContrainteEgal.h" />
+    <ClInclude Include="B1ContrainteInf.h" />
     <ClInclude Include="B1ContrainteInfEgal.h" />
     <ClInclude Include="B1ContrainteSomme.h" />
     <ClInclude Include="B1ContrainteSommeEgale.h" />
@@ -150,6 +152,8 @@
     <Text Include="B1Probleme4bis.txt" />
     <Text Include="B1Probleme4I.txt" />
     <Text Include="B1Probleme5.txt" />
+    <Text Include="B1Probleme6.txt" />
+    <Text Include="B1Probleme7.txt" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram.cd" />

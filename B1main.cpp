@@ -13,6 +13,7 @@
 #include "B1ContrainteEgal.h"
 #include "B1ContrainteDifferent.h"
 #include "B1ContrainteInfEgal.h"
+#include "B1ContrainteInf.h"
 #include "B1ContrainteSommeEgale.h"
 #include "B1ContrainteSommeInfEgale.h"
 #include "B1ContrainteSommeRetenue.h"
@@ -88,6 +89,8 @@ int main(int argc, const char * argv[]) {
 				contraintes.push_back(new ContrainteDifferent(nbres[1], nbres[2]));
 			else if (type == 3) // Type 3 : variable inférieure ou égale à une autre
 				contraintes.push_back(new ContrainteInfEgal(nbres[1], nbres[2]));
+			else if (type == 4) // Type 3 : variable strictement inférieure à une autre
+				contraintes.push_back(new ContrainteInf(nbres[1], nbres[2]));
 			else if (type >= 10 && type < 20) // Types de 10 à 19 : sommes basiques
 			{
 				int valeur = nbres[1];
@@ -199,6 +202,11 @@ int main(int argc, const char * argv[]) {
 						<< " + " << assignations[7] << assignations[3] << assignations[8] << assignations[0] << assignations[1]
 						<< " + " << assignations[7] << assignations[3] << assignations[8] << assignations[0] << assignations[1]
 						<< " = " << assignations[4] << assignations[2] << assignations[1] << assignations[9] << assignations[4] << assignations[1] << endl;
+				}
+				else if (nomFichier == "B1Probleme6.txt" || nomFichier == "B1Probleme7.txt")
+				{
+					cout << "Grille triangulaire :" << endl;
+					Affichage::afficherGrilleTriangulaire(assignations, 10);
 				}
 			}
 
