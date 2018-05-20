@@ -33,9 +33,6 @@
     <ClCompile Include="B1ContrainteSommeEgale.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="B1ContrainteSupEgal.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
     <ClCompile Include="B1main.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
@@ -68,9 +65,6 @@
     <ClInclude Include="B1ContrainteSommeEgale.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="B1ContrainteSupEgal.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
     <ClInclude Include="B1ContrainteSommeInfEgale.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
@@ -83,6 +77,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Readme.md" />
+    <None Include="ClassDiagram.cd" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="B1Exemple.txt">

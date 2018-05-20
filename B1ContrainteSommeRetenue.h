@@ -16,7 +16,7 @@ public:
 	virtual bool verifie(const vector<vector<int>> &domaines) override;
 	virtual void print() override {
 		printSomme();
-		cout << " = " << variable << " + 10 * " << retenue;
+		cout << " = " << variable << " + '10' * " << retenue;
 	}
 };
 

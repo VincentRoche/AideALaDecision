@@ -127,7 +127,6 @@
     <ClCompile Include="B1ContrainteSommeEgale.cpp" />
     <ClCompile Include="B1ContrainteSommeInfEgale.cpp" />
     <ClCompile Include="B1ContrainteSommeRetenue.cpp" />
-    <ClCompile Include="B1ContrainteSupEgal.cpp" />
     <ClCompile Include="B1main.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -140,7 +139,6 @@
     <ClInclude Include="B1ContrainteSommeEgale.h" />
     <ClInclude Include="B1ContrainteSommeInfEgale.h" />
     <ClInclude Include="B1ContrainteSommeRetenue.h" />
-    <ClInclude Include="B1ContrainteSupEgal.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="B1CarreMagique.txt" />
@@ -153,6 +151,7 @@
     <Text Include="B1Probleme4I.txt" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="ClassDiagram.cd" />
     <None Include="Readme.md" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

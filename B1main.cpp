@@ -13,7 +13,6 @@
 #include "B1ContrainteEgal.h"
 #include "B1ContrainteDifferent.h"
 #include "B1ContrainteInfEgal.h"
-#include "B1ContrainteSupEgal.h"
 #include "B1ContrainteSommeEgale.h"
 #include "B1ContrainteSommeInfEgale.h"
 #include "B1ContrainteSommeRetenue.h"
@@ -89,8 +88,6 @@ int main(int argc, const char * argv[]) {
 				contraintes.push_back(new ContrainteDifferent(nbres[1], nbres[2]));
 			else if (type == 3) // Type 3 : variable inférieure ou égale à une autre
 				contraintes.push_back(new ContrainteInfEgal(nbres[1], nbres[2]));
-			else if (type == 4) // Type 4 : variable supérieure ou égale à une autre
-				contraintes.push_back(new ContrainteSupEgal(nbres[1], nbres[2]));
 			else if (type >= 10 && type < 20) // Types de 10 à 19 : sommes basiques
 			{
 				int valeur = nbres[1];
@@ -124,7 +121,7 @@ int main(int argc, const char * argv[]) {
 
 
 	// Affichage des données
-	cout << "Variables et valeurs possibles :" << endl;
+	cout << endl << "Variables et valeurs possibles :" << endl;
 	for (unsigned int i = 0; i < nbVariables; i++)
 	{
 		cout << "Variable " << i << " :";
@@ -135,7 +132,7 @@ int main(int argc, const char * argv[]) {
 		}
 		cout << endl;
 	}
-	cout << "Contraintes :" << endl;
+	cout << endl << "Contraintes (les nombres entre apostrophes sont des valeurs numeriques, les autres sont les variables) :" << endl;
 	for (unsigned int i = 0; i < contraintes.size(); i++)
 	{
 		(*contraintes[i]).print();
@@ -146,7 +143,7 @@ int main(int argc, const char * argv[]) {
 	int choix;
 	do
 	{
-		cout << "Quelle methode tester ?" << endl
+		cout << endl << "Quelle methode tester ?" << endl
 			<< "1 : methode triviale" << endl
 			<< "2 : methode avec reduction des domaines de valeur" << endl
 			<< "3 : reduction des domaines de valeur avec choix de strategie de construction" << endl
@@ -157,7 +154,6 @@ int main(int argc, const char * argv[]) {
 		{
 			const clock_t begin_time = clock();
 
-			cout << endl << "Calcul en cours..." << endl;
 			vector<int> assignations;
 			if (choix == 1)
 			{
@@ -180,7 +176,7 @@ int main(int argc, const char * argv[]) {
 			}
 
 			// Affichage des résultats
-			cout << endl << "Resultats :" << endl;
+			cout << endl << endl << "### RESULTATS ###" << endl;
 			if (assignations.size() == 0)
 				cout << "Aucun resultat." << endl;
 			else
@@ -206,7 +202,7 @@ int main(int argc, const char * argv[]) {
 				}
 			}
 
-			std::cout << "Temps de calcul : " << float(clock() - begin_time) / CLOCKS_PER_SEC << " sec." << endl << endl;
+			std::cout << ">>> Temps de calcul : " << float(clock() - begin_time) / CLOCKS_PER_SEC << " sec." << endl << endl;
 		}
 
 	} while (choix >= 1 && choix <= 3);
@@ -249,6 +245,7 @@ vector<int> domainesToAssignations(const vector<vector<int>> &domaines)
 
 vector<int> methode_triviale(const vector<unsigned int> &variablesAssignees, const vector<vector<int>> &domaines, const unsigned int nbVariables, const vector<Contrainte *> &contraintes)
 {
+	cout << variablesAssignees.size() << " variables assignees" << endl;
 	if (variablesAssignees.size() == nbVariables) // Si toutes les variables ont été assignées
 	{
 		// Vérification des contraintes
@@ -317,18 +314,21 @@ vector<vector<int>> reduction_des_domaines(const vector<unsigned int>& variables
 							nveauDomaine.push_back(valTestee);
 						else
 						{
-							cout << "X" << var << "=" << valTestee << " ne vérifie pas ";
+							/*cout << "X" << var << "=" << valTestee << " ne vérifie pas ";
 							c->print();
-							cout << endl;
+							cout << endl;*/
 						}
 					}
 					nveauxDomaines[var] = nveauDomaine;
-					cout << "	Domaine de " << var << " reduit de " << domaines[var].size() << " a " << nveauDomaine.size() << " :";
-					for (int v : nveauDomaine)
+					if (nveauDomaine.size() < domaines[var].size())
 					{
-						cout << " " << v;
+						cout << "	Domaine de " << var << " reduit de " << domaines[var].size() << " a " << nveauDomaine.size() << " :";
+						for (int v : nveauDomaine)
+						{
+							cout << " '" << v << "'";
+						}
+						cout << endl;
 					}
-					cout << endl;
 					// Si le domaine est vide, réduction des branches, pas besoin de continuer
 					if (nveauDomaine.size() == 0)
 						return nveauxDomaines;
@@ -410,7 +410,7 @@ vector<int> methode_reduction_domaines(const vector<unsigned int>& variablesAssi
 		for (unsigned int i = 0; i < domaines[x].size(); i++)
 		{
 			int v = domaines[x][i];
-			cout << "* Essai de " << x << " = " << v << endl;
+			cout << "> Essai de " << x << " = '" << v << "'" << endl;
 			vector<vector<int>> nveauxDomaines = domaines;
 			nveauxDomaines[x] = { v }; // Le domaine de x ne contient que v
 			nveauxDomaines = reduction_des_domaines(variablesNonAssignees, x, nveauxDomaines, nbVariables, contraintes);
@@ -420,7 +420,8 @@ vector<int> methode_reduction_domaines(const vector<unsigned int>& variablesAssi
 				if (z.size() > 0)
 					return z;
 			}
-			cout << "Abandon" << endl;
+			else
+				cout << "	Abandon de la branche." << endl;
 		}
 		return vector<int>();
 	}
