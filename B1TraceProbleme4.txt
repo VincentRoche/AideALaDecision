@@ -1,0 +1,129 @@
+
+Variables et valeurs possibles :
+Variable 0 : 1
+Variable 1 : 1 2 3
+Variable 2 : 1 2 3
+Variable 3 : 1 2 3
+Variable 4 : 1 2 3
+Variable 5 : 1 2 3
+Variable 6 : 1 2 3
+Variable 7 : 1 2 3
+Variable 8 : 1 2 3
+Variable 9 : 1 2 3
+Variable 10 : 1 2 3
+Variable 11 : 1 2 3
+Variable 12 : 1
+Variable 13 : 1 2 3
+Variable 14 : 1 2 3
+Variable 15 : 1 2 3
+Variable 16 : 1 2 3
+Variable 17 : 1 2 3
+Variable 18 : 1 2 3
+Variable 19 : 1
+
+Quelle methode tester ?
+1 : methode triviale
+2 : methode avec reduction des domaines de valeur
+3 : reduction des domaines de valeur avec choix de strategie de construction
+Indiquez le numero choisi (ou un autre pour quitter) : 3
+Quelle strategie de construction ?
+0 : assignation des variables dans l'ordre de leur numerotation (par defaut)
+1 : choix des variables avec les plus grands domaines de valeurs
+2 : choix des variables avec les plus petits domaines de valeurs
+Indiquez le numero choisi : 0
+
+
+### RESULTATS ###
+Variable 0 = 1
+Variable 1 = 2
+Variable 2 = 3
+Variable 3 = 2
+Variable 4 = 2
+Variable 5 = 1
+Variable 6 = 3
+Variable 7 = 2
+Variable 8 = 3
+Variable 9 = 1
+Variable 10 = 2
+Variable 11 = 3
+Variable 12 = 1
+Variable 13 = 3
+Variable 14 = 2
+Variable 15 = 1
+Variable 16 = 3
+Variable 17 = 2
+Variable 18 = 3
+Variable 19 = 1
+>>> Temps de calcul : 0.493 sec.
+
+
+Quelle methode tester ?
+1 : methode triviale
+2 : methode avec reduction des domaines de valeur
+3 : reduction des domaines de valeur avec choix de strategie de construction
+Indiquez le numero choisi (ou un autre pour quitter) : 3
+Quelle strategie de construction ?
+0 : assignation des variables dans l'ordre de leur numerotation (par defaut)
+1 : choix des variables avec les plus grands domaines de valeurs
+2 : choix des variables avec les plus petits domaines de valeurs
+Indiquez le numero choisi : 1
+
+
+### RESULTATS ###
+Variable 0 = 1
+Variable 1 = 2
+Variable 2 = 3
+Variable 3 = 2
+Variable 4 = 2
+Variable 5 = 1
+Variable 6 = 3
+Variable 7 = 2
+Variable 8 = 3
+Variable 9 = 1
+Variable 10 = 2
+Variable 11 = 3
+Variable 12 = 1
+Variable 13 = 3
+Variable 14 = 2
+Variable 15 = 1
+Variable 16 = 3
+Variable 17 = 2
+Variable 18 = 3
+Variable 19 = 1
+>>> Temps de calcul : 0.598 sec.
+
+
+Quelle methode tester ?
+1 : methode triviale
+2 : methode avec reduction des domaines de valeur
+3 : reduction des domaines de valeur avec choix de strategie de construction
+Indiquez le numero choisi (ou un autre pour quitter) : 3
+Quelle strategie de construction ?
+0 : assignation des variables dans l'ordre de leur numerotation (par defaut)
+1 : choix des variables avec les plus grands domaines de valeurs
+2 : choix des variables avec les plus petits domaines de valeurs
+Indiquez le numero choisi : 2
+
+
+### RESULTATS ###
+Variable 0 = 1
+Variable 1 = 2
+Variable 2 = 3
+Variable 3 = 2
+Variable 4 = 2
+Variable 5 = 1
+Variable 6 = 3
+Variable 7 = 2
+Variable 8 = 3
+Variable 9 = 1
+Variable 10 = 2
+Variable 11 = 3
+Variable 12 = 1
+Variable 13 = 3
+Variable 14 = 2
+Variable 15 = 1
+Variable 16 = 3
+Variable 17 = 2
+Variable 18 = 3
+Variable 19 = 1
+>>> Temps de calcul : 0.371 sec.

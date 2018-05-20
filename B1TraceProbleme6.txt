@@ -1,0 +1,269 @@
+
+Variables et valeurs possibles :
+Variable 0 : 1 2 3 4 5 6
+Variable 1 : 2 3 4 5 6 7
+Variable 2 : 3 4 5 6 7 8
+Variable 3 : 7 8 9
+Variable 4 : 10
+Variable 5 : 11
+Variable 6 : 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27
+Variable 7 : 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28
+Variable 8 : 25 26 27 28 29
+Variable 9 : 26 27 28 29 30
+Variable 10 : 1 2 3 4
+Variable 11 : 2 3 4 5
+Variable 12 : 6 7 8
+Variable 13 : 7 8 9
+Variable 14 : 8 9 10
+Variable 15 : 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26
+Variable 16 : 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27
+Variable 17 : 24 25 26 27 28
+Variable 18 : 25 26 27 28 29
+Variable 19 : 1 2 3 4
+Variable 20 : 5
+Variable 21 : 6 7 8
+Variable 22 : 7 8 9
+Variable 23 : 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25
+Variable 24 : 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26
+Variable 25 : 23 24 25 26 27
+Variable 26 : 24 25 26 27 28
+Variable 27 : 1 2 3 4
+Variable 28 : 5 6 7
+Variable 29 : 6 7 8
+Variable 30 : 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24
+Variable 31 : 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25
+Variable 32 : 22 23 24 25 26
+Variable 33 : 23 24 25 26 27
+Variable 34 : 1 2 3 4 5 6
+Variable 35 : 1 2 3 4 5 6 7
+Variable 36 : 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23
+Variable 37 : 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24
+Variable 38 : 21 22 23 24 25
+Variable 39 : 22 23 24 25 26
+Variable 40 : 1 2 3 4 5 6
+Variable 41 : 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18
+Variable 42 : 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19
+Variable 43 : 20
+Variable 44 : 21 22 23 24 25
+Variable 45 : 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17
+Variable 46 : 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18
+Variable 47 : 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19
+Variable 48 : 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24
+Variable 49 : 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17
+Variable 50 : 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18
+Variable 51 : 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23
+Variable 52 : 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17
+Variable 53 : 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22
+Variable 54 : 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21
+
+Quelle methode tester ?
+1 : methode triviale
+2 : methode avec reduction des domaines de valeur
+3 : reduction des domaines de valeur avec choix de strategie de construction
+Indiquez le numero choisi (ou un autre pour quitter) : 3
+Quelle strategie de construction ?
+0 : assignation des variables dans l'ordre de leur numerotation (par defaut)
+1 : choix des variables avec les plus grands domaines de valeurs
+2 : choix des variables avec les plus petits domaines de valeurs
+Indiquez le numero choisi : 0
+
+
+### RESULTATS ###
+Variable 0 = 1
+Variable 1 = 2
+Variable 2 = 3
+Variable 3 = 7
+Variable 4 = 10
+Variable 5 = 11
+Variable 6 = 12
+Variable 7 = 13
+Variable 8 = 25
+Variable 9 = 26
+Variable 10 = 1
+Variable 11 = 2
+Variable 12 = 6
+Variable 13 = 7
+Variable 14 = 8
+Variable 15 = 9
+Variable 16 = 10
+Variable 17 = 24
+Variable 18 = 25
+Variable 19 = 1
+Variable 20 = 5
+Variable 21 = 6
+Variable 22 = 7
+Variable 23 = 8
+Variable 24 = 9
+Variable 25 = 23
+Variable 26 = 24
+Variable 27 = 1
+Variable 28 = 5
+Variable 29 = 6
+Variable 30 = 7
+Variable 31 = 8
+Variable 32 = 22
+Variable 33 = 23
+Variable 34 = 1
+Variable 35 = 1
+Variable 36 = 2
+Variable 37 = 3
+Variable 38 = 21
+Variable 39 = 22
+Variable 40 = 1
+Variable 41 = 1
+Variable 42 = 2
+Variable 43 = 20
+Variable 44 = 21
+Variable 45 = 1
+Variable 46 = 1
+Variable 47 = 2
+Variable 48 = 3
+Variable 49 = 1
+Variable 50 = 1
+Variable 51 = 2
+Variable 52 = 1
+Variable 53 = 1
+Variable 54 = 1
+>>> Temps de calcul : 0.461 sec.
+
+
+Quelle methode tester ?
+1 : methode triviale
+2 : methode avec reduction des domaines de valeur
+3 : reduction des domaines de valeur avec choix de strategie de construction
+Indiquez le numero choisi (ou un autre pour quitter) : 3
+Quelle strategie de construction ?
+0 : assignation des variables dans l'ordre de leur numerotation (par defaut)
+1 : choix des variables avec les plus grands domaines de valeurs
+2 : choix des variables avec les plus petits domaines de valeurs
+Indiquez le numero choisi : 1
+
+
+### RESULTATS ###
+Variable 0 = 1
+Variable 1 = 2
+Variable 2 = 3
+Variable 3 = 7
+Variable 4 = 10
+Variable 5 = 11
+Variable 6 = 12
+Variable 7 = 13
+Variable 8 = 25
+Variable 9 = 26
+Variable 10 = 1
+Variable 11 = 2
+Variable 12 = 6
+Variable 13 = 7
+Variable 14 = 8
+Variable 15 = 9
+Variable 16 = 10
+Variable 17 = 24
+Variable 18 = 25
+Variable 19 = 1
+Variable 20 = 5
+Variable 21 = 6
+Variable 22 = 7
+Variable 23 = 8
+Variable 24 = 9
+Variable 25 = 23
+Variable 26 = 24
+Variable 27 = 1
+Variable 28 = 5
+Variable 29 = 6
+Variable 30 = 7
+Variable 31 = 8
+Variable 32 = 22
+Variable 33 = 23
+Variable 34 = 1
+Variable 35 = 1
+Variable 36 = 2
+Variable 37 = 3
+Variable 38 = 21
+Variable 39 = 22
+Variable 40 = 1
+Variable 41 = 1
+Variable 42 = 2
+Variable 43 = 20
+Variable 44 = 21
+Variable 45 = 1
+Variable 46 = 1
+Variable 47 = 2
+Variable 48 = 3
+Variable 49 = 1
+Variable 50 = 1
+Variable 51 = 2
+Variable 52 = 1
+Variable 53 = 1
+Variable 54 = 1
+>>> Temps de calcul : 0.76 sec.
+
+
+Quelle methode tester ?
+1 : methode triviale
+2 : methode avec reduction des domaines de valeur
+3 : reduction des domaines de valeur avec choix de strategie de construction
+Indiquez le numero choisi (ou un autre pour quitter) : 3
+Quelle strategie de construction ?
+0 : assignation des variables dans l'ordre de leur numerotation (par defaut)
+1 : choix des variables avec les plus grands domaines de valeurs
+2 : choix des variables avec les plus petits domaines de valeurs
+Indiquez le numero choisi : 2
+
+
+### RESULTATS ###
+Variable 0 = 1
+Variable 1 = 2
+Variable 2 = 3
+Variable 3 = 7
+Variable 4 = 10
+Variable 5 = 11
+Variable 6 = 12
+Variable 7 = 13
+Variable 8 = 25
+Variable 9 = 26
+Variable 10 = 1
+Variable 11 = 2
+Variable 12 = 6
+Variable 13 = 7
+Variable 14 = 8
+Variable 15 = 9
+Variable 16 = 10
+Variable 17 = 24
+Variable 18 = 25
+Variable 19 = 1
+Variable 20 = 5
+Variable 21 = 6
+Variable 22 = 7
+Variable 23 = 8
+Variable 24 = 9
+Variable 25 = 23
+Variable 26 = 24
+Variable 27 = 1
+Variable 28 = 5
+Variable 29 = 6
+Variable 30 = 7
+Variable 31 = 8
+Variable 32 = 22
+Variable 33 = 23
+Variable 34 = 1
+Variable 35 = 1
+Variable 36 = 2
+Variable 37 = 3
+Variable 38 = 21
+Variable 39 = 22
+Variable 40 = 1
+Variable 41 = 1
+Variable 42 = 2
+Variable 43 = 20
+Variable 44 = 21
+Variable 45 = 1
+Variable 46 = 1
+Variable 47 = 2
+Variable 48 = 3
+Variable 49 = 1
+Variable 50 = 1
+Variable 51 = 2
+Variable 52 = 1
+Variable 53 = 1
+Variable 54 = 1
+>>> Temps de calcul : 0.435 sec.

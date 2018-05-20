@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="Contrainte" Collapsed="true">
-    <Position X="3.75" Y="1.25" Width="1.5" />
+    <Position X="5.25" Y="1.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AARAAAAAABAAAAAAAAAAAAgAAAAAAAAAAAAAAABEAAA=</HashCode>
       <FileName>B1Contrainte.h</FileName>
@@ -29,31 +29,38 @@
     </TypeIdentifier>
   </Class>
   <Class Name="ContrainteSomme" Collapsed="true">
-    <Position X="6.25" Y="2.5" Width="1.5" />
+    <Position X="8" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQBAAAAAAAAAAAAAAAAAAgAAAQAAIAAAAAAAAAAAAA=</HashCode>
       <FileName>B1ContrainteSomme.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ContrainteSommeEgale" Collapsed="true">
-    <Position X="2.5" Y="4" Width="2" />
+    <Position X="3" Y="4" Width="2" />
     <TypeIdentifier>
       <HashCode>AAQAAAAAAAAAAAAAABAAAAgAAAAACAAAAAAAAAAAAAA=</HashCode>
       <FileName>B1ContrainteSommeEgale.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ContrainteSommeInfEgale" Collapsed="true">
-    <Position X="4.75" Y="4" Width="2" />
+    <Position X="5.25" Y="4" Width="2" />
     <TypeIdentifier>
       <HashCode>AAQAAAAAAAAAAAAAAAAAAAgAAAAACAAAgAAAAAAAAAA=</HashCode>
       <FileName>B1ContrainteSommeInfEgale.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ContrainteSommeRetenue" Collapsed="true">
-    <Position X="7" Y="4" Width="2" />
+    <Position X="7.5" Y="4" Width="2" />
     <TypeIdentifier>
       <HashCode>AAQBAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAgEAAA=</HashCode>
       <FileName>B1ContrainteSommeRetenue.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ContrainteInf" Collapsed="true">
+    <Position X="6.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAgAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>B1ContrainteInf.h</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />
