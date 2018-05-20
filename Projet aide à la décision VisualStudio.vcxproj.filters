@@ -86,9 +86,6 @@
     <None Include="ClassDiagram.cd" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="B1Exemple.txt">
-      <Filter>Fichiers de ressources</Filter>
-    </Text>
     <Text Include="B1Probleme1.txt">
       <Filter>Fichiers de ressources</Filter>
     </Text>
@@ -96,9 +93,6 @@
       <Filter>Fichiers de ressources</Filter>
     </Text>
     <Text Include="B1Probleme2.txt">
-      <Filter>Fichiers de ressources</Filter>
-    </Text>
-    <Text Include="B1CarreMagique.txt">
       <Filter>Fichiers de ressources</Filter>
     </Text>
     <Text Include="B1Probleme5.txt">

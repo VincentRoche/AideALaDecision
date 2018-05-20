@@ -143,8 +143,6 @@
     <ClInclude Include="B1ContrainteSommeRetenue.h" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="B1CarreMagique.txt" />
-    <Text Include="B1Exemple.txt" />
     <Text Include="B1Probleme1.txt" />
     <Text Include="B1Probleme2.txt" />
     <Text Include="B1Probleme3.txt" />
